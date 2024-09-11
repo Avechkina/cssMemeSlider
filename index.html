@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Meme Slider</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    <div class="slider-body">
+        <input type="radio" id="radio1" name="memes" value="meme-1" checked>
+        <input type="radio" id="radio2" name="memes" value="meme-2" >
+        <input type="radio" id="radio3" name="memes" value="meme-3" >
+        <input type="radio" id="radio4" name="memes" value="meme-4" >
+        <div class="wrapper">
+            <img class='first' src="./images/meme-1.jpg" alt="meme-1">
+            <img class='second' src="./images/meme-2.jpg" alt="meme-2">
+            <img class='third' src="./images/meme-3.jpg" alt="meme-3">
+            <img class='fourth' src="./images/meme-4.jpg" alt="meme-4">
+        </div>
+        <div>
+            <label for="radio1"><div class="dot"></div></label>
+            <label for="radio2"><div class="dot"></div></label>
+            <label for="radio3"><div class="dot"></div></label>
+            <label for="radio4"><div class="dot"></div></label>
+        </div>
+        <div>
+            <p class='first'>AAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+            <p class='second'>Stay negative.</p>
+            <p class='third'>It's a beautiful day to destroy patriarchy</p>
+            <p class='fourth'>HEY bitch...</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
