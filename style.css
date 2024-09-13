@@ -1,42 +1,166 @@
+@font-face {
+    font-family: ShadowsIntoLight;
+    src: url(./fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: red 1px solid;
 }
+
 body {
     background-color: #202020;
 }
+
 .slider-body {
-    width: 50vw;
+    max-width: 730px;
+    max-height: 730px;
+    width: 90vh;
     height: 90vh;
+    margin: 4vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    column-gap: 20%;
+    background-color: #e9e7cd;
+    padding: 2vw;
+    gap: 2vw
+}
+
+input {
+    display: none;
+}
+
+.wrapper {
+    height: 80vh;
+    width: 80vh;
+    max-width: 530px;
+    max-height: 530px;
     margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 3vh;
 }
+
+.div-images {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
 img {
-    display: none;
+    width: 80vh;
+    max-width: 530px;
+    height: auto;
 }
-.dot {
-    background-color: #fffcf0;
+
+.div-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vh;
+    max-width: 600px;
+    align-self: center;
+
+}
+
+.div-controls {
+    display: flex;
+    order: 3;
+    gap: 1vh;
+
+}
+
+label {
+    padding: 1vh;
+
+}
+
+.control {
+    background-color: #3f2a08;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #3f2a08;
 }
+
+label:hover .control {
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+.div-text-wrap {
+    display: flex;
+    overflow: hidden;
+    width: 28vh;
+}
+
+.div-text {
+    width: 112vh;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+
+}
+
 p {
-    display: none;
-    color: #fffcf0;
+    display: block;
+    color: #3f2a08;
+    font-size: 20px;
+    font-family: ShadowsIntoLight;
+    font-weight: 800;
+    letter-spacing: .1em;
+    white-space: nowrap;
+    width: 28vh;
 }
 
 
-#radio1:checked ~ div .first {
-    display: initial !important;
+#radio1:checked~.wrapper .div-images {
+    transform: translateX(0);
 }
-#radio2:checked ~ div .second {
-    display: initial !important;
+
+#radio2:checked~.wrapper .div-images {
+    transform: translateX(-100%);
 }
-#radio3:checked ~ div .third {
-    display: initial !important;
+
+#radio3:checked~.wrapper .div-images {
+    transform: translateX(-200%);
 }
-#radio4:checked ~ div .fourth {
-    display: initial !important;
+
+#radio4:checked~.wrapper .div-images {
+    transform: translateX(-300%);
+}
+
+#radio1:checked~.div-wrap .div-text-wrap .div-text {
+    transform: translateX(0);
+}
+
+#radio2:checked~.div-wrap .div-text-wrap .div-text {
+    transform: translateX(-25%);
+}
+
+#radio3:checked~.div-wrap .div-text-wrap .div-text {
+    transform: translateX(-50%);
+}
+
+#radio4:checked~.div-wrap .div-text-wrap .div-text {
+    transform: translateX(-75%);
+}
+
+#radio1:checked~.div-wrap .div-controls #control1 .control {
+    background-color: transparent !important;
+}
+
+#radio2:checked~.div-wrap .div-controls #control2 .control {
+    background-color: transparent !important;
+}
+
+#radio3:checked~.div-wrap .div-controls #control3 .control {
+    background-color: transparent !important;
+}
+
+#radio4:checked~.div-wrap .div-controls #control4 .control {
+    background-color: transparent !important;
 }
