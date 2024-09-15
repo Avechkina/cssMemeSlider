@@ -14,8 +14,8 @@ body {
 }
 
 .slider-body {
-    max-width: 730px;
-    max-height: 730px;
+    max-width: 45rem;
+    max-height: 45rem;
     width: 90vh;
     height: 90vh;
     margin: 4vh auto;
@@ -24,8 +24,8 @@ body {
     justify-content: space-between;
     column-gap: 20%;
     background-color: #e9e7cd;
-    padding: 2vw;
-    gap: 2vw
+    padding: 2vw 2vw 5vw;
+    gap: 1rem
 }
 
 input {
@@ -35,8 +35,8 @@ input {
 .wrapper {
     height: 80vh;
     width: 80vh;
-    max-width: 530px;
-    max-height: 530px;
+    max-width: 33rem;
+    max-height: 33rem;
     margin: auto;
     overflow: hidden;
     display: flex;
@@ -53,7 +53,7 @@ input {
 
 img {
     width: 80vh;
-    max-width: 530px;
+    max-width: 33rem;
     height: auto;
 }
 
@@ -62,7 +62,7 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 80vh;
-    max-width: 600px;
+    max-width: 33rem;
     align-self: center;
 
 }
@@ -70,26 +70,30 @@ img {
 .div-controls {
     display: flex;
     order: 3;
-    gap: 1vh;
+    gap: 0.5rem;
 
 }
 
 label {
     padding: 1vh;
+    cursor: pointer;
+
 
 }
 
 .control {
     background-color: #3f2a08;
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #3f2a08;
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #3f2a08;
+    cursor: pointer;
 }
 
 label:hover .control {
     background-color: #8B4513;
     border-color: #8B4513;
+
 }
 
 .div-text-wrap {
@@ -108,7 +112,7 @@ label:hover .control {
 p {
     display: block;
     color: #3f2a08;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: ShadowsIntoLight;
     font-weight: 800;
     letter-spacing: .1em;
@@ -163,4 +167,31 @@ p {
 
 #radio4:checked~.div-wrap .div-controls #control4 .control {
     background-color: transparent !important;
+}
+@media (width < 650px), (orientation: portrait)  {
+    .slider-body {
+        width: 90vw;
+        height: 90vw;
+    }
+    .wrapper {
+        width: 80vw;
+        height: 80vw;
+    }
+    img {
+        width: 80vw;
+    }
+    .div-wrap {
+        width: 80vw;
+
+    }
+    .div-text-wrap {
+        width: 50vw;
+    }
+    .div-text {
+        width: 200vw;
+    }
+    p {
+        width: 50vw;
+        font-size: 1em;
+    }
 }
