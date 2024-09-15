@@ -182,16 +182,23 @@ p {
     }
     .div-wrap {
         width: 80vw;
+        flex-direction: column;
+        gap: 0.5rem
 
     }
     .div-text-wrap {
-        width: 50vw;
+        width: 80vw;
     }
     .div-text {
-        width: 200vw;
+        width: 320vw;
     }
     p {
-        width: 50vw;
+        width: 80vw;
         font-size: 1em;
+        text-align: left;
+    }
+    .div-controls {
+        order: 0;
+
     }
 }
